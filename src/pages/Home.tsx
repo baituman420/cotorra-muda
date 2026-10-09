@@ -8,51 +8,90 @@ interface HomeProps {
 export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   const baseUrl = import.meta.env.BASE_URL;
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 1024 : false
+  );
+
+  React.useEffect(() => {
+    const mql = window.matchMedia('(max-width: 1023px)');
+    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, []);
 
   return (
     <main className="w-full pt-20 bg-surface">
       <div className="flex flex-col w-full text-on-surface">
-{/*  1. HERO — IMPACTO INMEDIATO  */}
-<section className="relative w-full overflow-hidden bg-surface pb-space-xl">
-<div className="max-w-7xl mx-auto px-6 lg:px-margin-lg pt-space-lg">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
-{/*  Left Column: Typography & CTAs  */}
-<div className="lg:col-span-6 xl:col-span-6 flex flex-col space-y-space-md z-10">
-<div className="inline-flex items-center gap-space-xs w-fit bg-[#2D231E] text-surface-bright px-space-md py-space-xs rounded-full shadow-sm border border-[#3E3028]"><span className="w-2.5 h-2.5 rounded-full bg-[#dded3a] animate-ping"></span><span className="font-label-sm text-label-sm uppercase tracking-widest font-bold text-[#dded3a]">Barra Viva · Bilbao Indautxu</span></div>
-<h1 className="font-display-xl text-display-xl-mobile lg:text-display-xl font-extrabold uppercase tracking-tight text-[#2D231E] leading-none">
-            Aquí la cotorra es muda. <br />
-<span className="text-secondary italic font-light">El resto, no.</span>
-</h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-            Desayunos con fundamento, barra rebosante de pintxos, buena mesa y mejores encuentros. Un espacio auténtico para saborear y vivir Bilbao a cualquier hora del día.
-          </p>
-<div className="flex flex-wrap items-center gap-space-md pt-space-sm">
-<a className="bg-primary text-on-primary hover:bg-secondary transition-all rounded-full px-space-lg py-space-sm font-label-lg text-label-lg uppercase tracking-wider shadow-[3px_3px_0px_#79f2f5] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 inline-flex items-center gap-space-xs" href="#carta">
-<span className="">Descubre nuestra carta</span>
-<span className="material-symbols-outlined text-lg">restaurant_menu</span>
-</a>
-<a className="bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors rounded-full px-space-lg py-space-sm font-label-lg text-label-lg uppercase tracking-wider shadow-sm inline-flex items-center gap-space-xs" href="#contacto">
-<span className="material-symbols-outlined text-lg">near_me</span>
-<span className="">Ven a vernos</span>
-</a>
-</div>
-{/*  Interactive Micro-Badge  */}
-<div className="pt-space-md flex items-center gap-space-sm text-on-surface-variant">
-<a className="inline-flex items-center gap-2 group font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold" href="#experiencia">
-<span className="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center group-hover:translate-y-0.5 transition-transform">
-<span className="material-symbols-outlined text-base">arrow_downward</span>
-</span>
-<span className="">Scroll para saborear Bilbao</span>
-</a>
-</div>
-</div>
-{/*  Right Column: Visual Composition with Mascot & Real Photos  */}
-<div className="lg:col-span-6 xl:col-span-6 relative mt-space-md lg:mt-0 flex flex-col items-center justify-start overflow-visible">
-            <HeroMascot />
+        {/*  1. HERO — IMPACTO INMEDIATO (Mobile-First: vídeo de bienvenida a pantalla completa en móvil, layout a 2 columnas en desktop)  */}
+        <section className="relative w-full min-h-[92svh] lg:min-h-0 flex flex-col justify-end lg:justify-start lg:block overflow-hidden bg-surface pb-10 sm:pb-12 lg:pb-space-xl pt-4 lg:pt-0">
+          {/*  Mobile Video Layer: edge-to-edge directo sobre la sección para cubrir todo el Hero  */}
+          {isMobile && (
+            <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+              <HeroMascot />
+              {/*  Gradiente de legibilidad en móvil: protege el texto inferior sin oscurecer la cotorra arriba  */}
+              <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/75 via-50% to-transparent pointer-events-none" />
+            </div>
+          )}
+
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-margin-lg pt-space-md lg:pt-space-lg w-full relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+              {/*  Typography & CTAs: Aparición suave y secuenciada tras el aterrizaje del vídeo  */}
+              <div className="lg:col-span-6 xl:col-span-6 flex flex-col space-y-space-sm sm:space-y-space-md relative z-10">
+                {/*  Pastilla: retardo 1 (0.8s)  */}
+                <div className="hero-delay-1 inline-flex items-center gap-space-xs w-fit bg-[#2D231E] text-surface-bright px-space-md py-space-xs rounded-full shadow-sm border border-[#3E3028]">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#dded3a] animate-ping"></span>
+                  <span className="font-label-sm text-label-sm uppercase tracking-widest font-bold text-[#dded3a]">Barra Viva · Bilbao Indautxu</span>
+                </div>
+
+                {/*  H1 Titular: retardo 2 (1.1s)  */}
+                <h1 className="hero-delay-2 font-display-xl text-display-xl-mobile sm:text-4xl lg:text-display-xl font-extrabold uppercase tracking-tight text-[#2D231E] leading-[1.08] lg:leading-none">
+                  Aquí la cotorra es muda. <br />
+                  <span className="text-secondary italic font-light">El resto, no.</span>
+                </h1>
+
+                {/*  Texto descriptivo: retardo 3 (1.3s)  */}
+                <p className="hero-delay-3 font-body-lg text-sm sm:text-base lg:text-body-lg text-on-surface-variant max-w-xl font-medium leading-relaxed">
+                  Desayunos con fundamento, barra rebosante de pintxos, buena mesa y mejores encuentros. Un espacio auténtico para saborear y vivir Bilbao a cualquier hora del día.
+                </p>
+
+                {/*  Botones CTA: retardo 4 (1.5s) con ergonomía táctil responsive  */}
+                <div className="hero-delay-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-space-xs sm:pt-space-sm w-full sm:w-auto">
+                  <a
+                    className="bg-primary text-on-primary hover:bg-secondary transition-all rounded-full px-space-lg py-3.5 sm:py-space-sm font-label-lg text-label-lg uppercase tracking-wider shadow-[3px_3px_0px_#79f2f5] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 inline-flex items-center justify-center gap-space-xs text-center"
+                    href="#carta"
+                  >
+                    <span className="">Descubre nuestra carta</span>
+                    <span className="material-symbols-outlined text-lg">restaurant_menu</span>
+                  </a>
+                  <a
+                    className="bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface hover:bg-surface-container-high transition-colors rounded-full px-space-lg py-3.5 sm:py-space-sm font-label-lg text-label-lg uppercase tracking-wider shadow-sm border border-outline-variant/30 inline-flex items-center justify-center gap-space-xs text-center"
+                    href="#contacto"
+                  >
+                    <span className="material-symbols-outlined text-lg">near_me</span>
+                    <span className="">Ven a vernos</span>
+                  </a>
+                </div>
+
+                {/*  Interactive Micro-Badge: retardo 4 (oculto en pantallas móviles muy cortas para optimizar foco)  */}
+                <div className="hero-delay-4 pt-space-xs sm:pt-space-md hidden sm:flex items-center gap-space-sm text-on-surface-variant">
+                  <a className="inline-flex items-center gap-2 group font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold" href="#experiencia">
+                    <span className="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center group-hover:translate-y-0.5 transition-transform">
+                      <span className="material-symbols-outlined text-base">arrow_downward</span>
+                    </span>
+                    <span className="">Scroll para saborear Bilbao</span>
+                  </a>
+                </div>
+              </div>
+
+              {/*  Desktop Column: Vídeo en la columna derecha para desktop  */}
+              {!isMobile && (
+                <div className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-start overflow-visible h-[550px]">
+                  <HeroMascot />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 {/*  2. SECCIÓN: DE LA MAÑANA A LA MESA  */}
 <section className="w-full py-space-xl bg-surface-container-low" id="experiencia">
 <div className="max-w-7xl mx-auto px-6 lg:px-margin-lg">

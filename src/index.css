@@ -25,3 +25,70 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+/* Sequenced Hero Entrance: Video lands first, texts enter smoothly after delay */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-delay-1 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+  opacity: 0;
+}
+
+.hero-delay-2 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+  opacity: 0;
+}
+
+.hero-delay-3 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
+  opacity: 0;
+}
+
+.hero-delay-4 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-delay-1,
+  .hero-delay-2,
+  .hero-delay-3,
+  .hero-delay-4 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Responsive Cotorra Video Element: Full Hero cover on mobile, contain on desktop */
+.cotorra-video-element {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 68% 25% !important;
+  mix-blend-mode: multiply !important;
+  mask-image: linear-gradient(to bottom, black 55%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 95%);
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .cotorra-video-element {
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: translateY(10px) scale(0.97) !important;
+    mask-image: linear-gradient(to bottom, black 65%, transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 95%);
+  }
+}
+
+
