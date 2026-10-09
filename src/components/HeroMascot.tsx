@@ -23,15 +23,15 @@ export const HeroMascot: React.FC = () => {
   return (
     <div className="w-full flex items-center justify-center">
       {prefersReducedMotion ? (
-        <div className="w-full max-w-lg flex items-center justify-center">
+        <div className="w-full max-w-xl lg:max-w-2xl flex items-center justify-center h-[460px] sm:h-[540px] lg:h-[620px]">
           <img
             src={staticImageUrl}
             alt="Mascota oficial La Cotorra Muda"
-            className="w-full max-h-[460px] object-contain"
+            className="w-full h-full max-h-[600px] object-contain"
           />
         </div>
       ) : (
-        <div className="w-full max-w-lg overflow-hidden aspect-[16/9] flex items-center justify-center">
+        <div className="w-full max-w-xl lg:max-w-2xl flex items-center justify-center h-[460px] sm:h-[540px] lg:h-[620px]">
           <Player
             component={CotorraHero}
             inputProps={{ videoSrc: videoUrl }}
@@ -45,6 +45,7 @@ export const HeroMascot: React.FC = () => {
             style={{
               width: '100%',
               height: '100%',
+              maxHeight: '620px',
               display: 'block',
             }}
           />
