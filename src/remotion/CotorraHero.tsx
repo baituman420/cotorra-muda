@@ -18,7 +18,6 @@ export const CotorraHero: React.FC<CotorraHeroProps> = ({ videoSrc }) => {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'transparent',
-        overflow: 'hidden',
       }}
     >
       <Video
@@ -27,6 +26,11 @@ export const CotorraHero: React.FC<CotorraHeroProps> = ({ videoSrc }) => {
           width: '100%',
           height: '100%',
           objectFit: 'contain',
+          objectPosition: 'center',
+          transform: 'translateY(16px) scale(0.92)',
+          mixBlendMode: 'multiply',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 82%, transparent 98%)',
+          maskImage: 'linear-gradient(to bottom, black 82%, transparent 98%)',
           display: 'block',
         }}
         muted
