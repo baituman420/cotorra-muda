@@ -34,15 +34,15 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-margin-lg w-full relative z-10">
             <div className="max-w-xl lg:max-w-2xl flex flex-col space-y-space-sm sm:space-y-space-md">
               {/*  Pastilla: retardo 1 (0.8s)  */}
-              <div className="hero-delay-1 inline-flex items-center gap-space-xs w-fit bg-[#2D231E] text-surface-bright px-space-md py-space-xs rounded-full shadow-sm border border-[#3E3028]">
+              <div className="hero-delay-1 inline-flex items-center gap-space-xs w-fit bg-[#3D3029] text-on-surface px-space-md py-space-xs rounded-full shadow-md border border-[#504138]">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#dded3a] animate-ping"></span>
                 <span className="font-label-sm text-label-sm uppercase tracking-widest font-bold text-[#dded3a]">Barra Viva · Bilbao Indautxu</span>
               </div>
 
               {/*  H1 Titular: retardo 2 (1.1s)  */}
-              <h1 className="hero-delay-2 font-display-xl text-display-xl-mobile sm:text-4xl lg:text-display-xl font-extrabold uppercase tracking-tight text-[#2D231E] leading-[1.08] lg:leading-none">
+              <h1 className="hero-delay-2 font-display-xl text-display-xl-mobile sm:text-4xl lg:text-display-xl font-extrabold uppercase tracking-tight text-on-surface leading-[1.08] lg:leading-none">
                 Aquí la cotorra es muda. <br />
-                <span className="text-secondary italic font-light">El resto, no.</span>
+                <span className="text-[#7cf5f8] italic font-light">El resto, no.</span>
               </h1>
 
               {/*  Texto descriptivo: retardo 3 (1.3s)  */}
@@ -86,14 +86,14 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 {/*  Section Header  */}
 <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
 <div>
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#5C483D] font-bold flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#332822]"></span>Ritmo continuo</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#D0BFB2] font-bold flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#dded3a]"></span>Ritmo continuo</span>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
             De la mañana a la mesa
           </h2>
 <p className="font-body-md text-body-md text-on-surface-variant mt-space-xs">Siempre hay un buen pretexto para parar en La Cotorra.</p>
 </div>
 <div className="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#5C483D] font-bold flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#332822]"></span>Ritmo continuo</span>
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#D0BFB2] font-bold flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#dded3a]"></span>Ritmo continuo</span>
 <span className="">Servicio continuo en barra y mesa</span>
 </div>
 </div>
@@ -104,7 +104,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="flex flex-col sm:flex-row gap-space-md items-start sm:items-center justify-between mb-space-sm">
 <div>
 <span className="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase font-bold">08:00h en adelante</span>
-<h3 className="font-headline-sm text-headline-sm text-[#2D231E] mt-space-xs font-bold">Desayunos &amp; Café artesanal</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface mt-space-xs font-bold">Desayunos &amp; Café artesanal</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Tostadas de hogaza con aguacate, bollería tierna y cafés de especialidad para arrancar con brío.</p>
 </div>
 </div>
@@ -121,7 +121,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="md:col-span-5 bg-surface-container-lowest rounded-3xl p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
 <div>
 <span className="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase font-bold">100% Natural</span>
-<h3 className="font-headline-sm text-headline-sm text-[#2D231E] mt-space-xs font-bold">Smoothies &amp; Zumos</h3>
+<h3 className="font-headline-sm text-headline-sm text-on-surface mt-space-xs font-bold">Smoothies &amp; Zumos</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">Fruta fresca de temporada batida al momento. Energía pura y combinaciones refrescantes.</p>
 </div>
 <div className="h-52 w-full rounded-2xl overflow-hidden mt-space-sm">
@@ -205,8 +205,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="max-w-7xl mx-auto px-6 lg:px-margin-lg">
 {/*  Section Header & Filter Tabs  */}
 <div className="flex flex-col items-center text-center space-y-space-xs mb-space-lg">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Gastronomía sincera</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] font-bold">Gastronomía sincera</span>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
           Nuestra Carta Seleccionada
         </h2>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">
@@ -219,7 +219,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           onClick={() => setActiveCategory('all')}
           className={`menu-filter-btn px-space-md py-1.5 rounded-full font-label-sm text-label-sm uppercase transition-all ${
             activeCategory === 'all'
-              ? 'bg-[#2D231E] text-surface-bright shadow-sm font-bold'
+              ? 'bg-[#dded3a] text-[#1a1d00] shadow-md font-bold'
               : 'bg-surface-container-high text-on-surface hover:bg-surface-variant'
           }`}
         >Todos</button><button
@@ -228,7 +228,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           onClick={() => setActiveCategory('pintxos')}
           className={`menu-filter-btn px-space-md py-1.5 rounded-full font-label-sm text-label-sm uppercase transition-all ${
             activeCategory === 'pintxos'
-              ? 'bg-[#2D231E] text-surface-bright shadow-sm font-bold'
+              ? 'bg-[#dded3a] text-[#1a1d00] shadow-md font-bold'
               : 'bg-surface-container-high text-on-surface hover:bg-surface-variant'
           }`}
         >Pintxos</button><button
@@ -237,7 +237,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           onClick={() => setActiveCategory('bocadillos')}
           className={`menu-filter-btn px-space-md py-1.5 rounded-full font-label-sm text-label-sm uppercase transition-all ${
             activeCategory === 'bocadillos'
-              ? 'bg-[#2D231E] text-surface-bright shadow-sm font-bold'
+              ? 'bg-[#dded3a] text-[#1a1d00] shadow-md font-bold'
               : 'bg-surface-container-high text-on-surface hover:bg-surface-variant'
           }`}
         >Bocadillos & Tablas</button><button
@@ -246,7 +246,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           onClick={() => setActiveCategory('especiales')}
           className={`menu-filter-btn px-space-md py-1.5 rounded-full font-label-sm text-label-sm uppercase transition-all ${
             activeCategory === 'especiales'
-              ? 'bg-[#2D231E] text-surface-bright shadow-sm font-bold'
+              ? 'bg-[#dded3a] text-[#1a1d00] shadow-md font-bold'
               : 'bg-surface-container-high text-on-surface hover:bg-surface-variant'
           }`}
         >Platos del Día</button><button
@@ -255,7 +255,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           onClick={() => setActiveCategory('marisco')}
           className={`menu-filter-btn px-space-md py-1.5 rounded-full font-label-sm text-label-sm uppercase transition-all ${
             activeCategory === 'marisco'
-              ? 'bg-[#2D231E] text-surface-bright shadow-sm font-bold'
+              ? 'bg-[#dded3a] text-[#1a1d00] shadow-md font-bold'
               : 'bg-surface-container-high text-on-surface hover:bg-surface-variant'
           }`}
         >Marisco Finde</button></div>
@@ -429,13 +429,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <span className="w-3 h-3 rounded-full bg-error"></span>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-error font-bold">San Mamés a un paso</span>
 </div>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
             Aquí también se siente el Athletic
           </h2>
 <p className="font-body-lg text-body-lg text-on-surface-variant">
             Pasión bilbaína, cuadrillas incondicionales, días de partido y la mejor previa. En La Cotorra Muda el poteo se vive con orgullo rojiblanco: una copa de crianza, un txakoli bien tirado, risas de toda la vida y el rugido de la catedral a escasos metros.
           </p>
-<div className="grid grid-cols-2 gap-space-md pt-space-xs"><div className="p-space-sm rounded-2xl bg-[#2D231E] text-surface-bright border border-[#3E3028]"><span className="font-headline-sm text-headline-sm text-[#dded3a] font-bold">100%</span><p className="font-body-sm text-body-sm text-surface-container-high">Ambiente de previa y pospartido</p></div><div className="p-space-sm rounded-2xl bg-[#2D231E] text-surface-bright border border-[#3E3028]"><span className="font-headline-sm text-headline-sm text-[#dded3a] font-bold">5 min</span><p className="font-body-sm text-body-sm text-surface-container-high">Caminando directo a San Mamés</p></div></div>
+<div className="grid grid-cols-2 gap-space-md pt-space-xs"><div className="p-space-sm rounded-2xl bg-surface-container-high text-surface-bright border border-outline-variant"><span className="font-headline-sm text-headline-sm text-[#dded3a] font-bold">100%</span><p className="font-body-sm text-body-sm text-on-surface-variant">Ambiente de previa y pospartido</p></div><div className="p-space-sm rounded-2xl bg-surface-container-high text-surface-bright border border-outline-variant"><span className="font-headline-sm text-headline-sm text-[#dded3a] font-bold">5 min</span><p className="font-body-sm text-body-sm text-on-surface-variant">Caminando directo a San Mamés</p></div></div>
 </div>
 </div>
 </div>
@@ -446,8 +446,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="bg-surface-container-lowest rounded-3xl p-space-lg lg:p-space-xl shadow-md">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
 <div className="lg:col-span-6 space-y-space-md">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Mesas &amp; Cuadrillas</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] font-bold">Mesas &amp; Cuadrillas</span>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
               Los mejores planes se comparten
             </h2>
 <p className="font-body-md text-body-md text-on-surface-variant">
@@ -455,15 +455,15 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </p>
 <ul className="space-y-space-xs font-body-sm text-body-sm text-on-surface">
 <li className="flex items-center gap-2">
-<span className="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span className="material-symbols-outlined text-[#7cf5f8] text-sm">check_circle</span>
 <span className="">Menús cerrados de picoteo con barra libre opcional</span>
 </li>
 <li className="flex items-center gap-2">
-<span className="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span className="material-symbols-outlined text-[#7cf5f8] text-sm">check_circle</span>
 <span className="">Opciones vegetarianas y sin gluten previo aviso</span>
 </li>
 <li className="flex items-center gap-2">
-<span className="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span className="material-symbols-outlined text-[#7cf5f8] text-sm">check_circle</span>
 <span className="">Reserva rápida sin complicaciones de pago</span>
 </li>
 </ul>
@@ -488,8 +488,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="max-w-7xl mx-auto px-6 lg:px-margin-lg">
 <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-space-lg gap-space-xs">
 <div>
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Comunidad &amp; Vida Social</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] font-bold">Comunidad &amp; Vida Social</span>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
             Lo que pasa en La Cotorra
           </h2>
 </div>
@@ -522,8 +522,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
 <div className="lg:col-span-7 space-y-space-md">
 <div>
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Puertas Abiertas</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-[#2D231E] tracking-tight font-bold">
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] font-bold">Puertas Abiertas</span>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface tracking-tight font-bold">
                 ¿Nos vemos hoy?
               </h2>
 <p className="font-body-md text-body-md text-on-surface-variant mt-1">

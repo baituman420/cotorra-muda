@@ -35,7 +35,7 @@ export const Grupos: React.FC<GruposProps> = ({ onNavigate }) => {
 <span className="material-symbols-outlined text-[16px]">groups</span>
 <span className="">Cuadrillas · Cumpleaños · Afterwork</span>
 </div>
-<h1 className="font-display-xl text-headline-lg lg:text-display-xl text-primary font-extrabold tracking-tight" style={{'color': '#2D231E'}}>
+<h1 className="font-display-xl text-headline-lg lg:text-display-xl text-on-surface font-extrabold tracking-tight" style={{'color': '#F5EBE1'}}>
           Los mejores planes se comparten en cuadrilla
         </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
@@ -102,8 +102,8 @@ export const Grupos: React.FC<GruposProps> = ({ onNavigate }) => {
 {/*  Section Title Header  */}
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div className="space-y-space-xs max-w-xl">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary bg-surface-container-high px-space-sm py-space-xs rounded-full inline-block">Formatos Personalizados</span>
-<h2 className="font-headline-lg text-headline-lg text-primary font-bold tracking-tight" style={{'color': '#2D231E'}}>3 propuestas pensadas para compartir</h2>
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] bg-surface-container-high px-space-sm py-space-xs rounded-full inline-block">Formatos Personalizados</span>
+<h2 className="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight" style={{'color': '#F5EBE1'}}>3 propuestas pensadas para compartir</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
           Diseñamos menús cerrados con bebida incluida o fórmulas abiertas adaptadas a alergias, vegetarianos e intolerancias.
@@ -220,7 +220,7 @@ export const Grupos: React.FC<GruposProps> = ({ onNavigate }) => {
 <span className="w-3 h-3 rounded-full bg-secondary"></span>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Sin compromiso</span>
 </div>
-<h2 className="font-headline-md text-headline-md text-primary font-bold" style={{'color': '#2D231E'}}>Reserva tu mesa para cuadrilla</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface font-bold" style={{'color': '#F5EBE1'}}>Reserva tu mesa para cuadrilla</h2>
 <p className="font-body-md text-body-md text-on-surface-variant">
             Rellena este formulario con los detalles y te confirmamos disponibilidad o te proponemos opciones en menos de 24 horas.
           </p>
@@ -352,8 +352,8 @@ export const Grupos: React.FC<GruposProps> = ({ onNavigate }) => {
 <img alt="Mascota oficial de La Cotorra Muda saludando" src={`${baseUrl}images/branding/cotorra-gracias.jpg`} />
 </div>
 <div className="space-y-space-xs">
-<span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">El Espíritu de La Cotorra</span>
-<h3 className="font-display-xl text-headline-md sm:text-headline-lg font-bold tracking-tight" style={{'color': '#2D231E'}}>
+<span className="font-label-sm text-label-sm uppercase tracking-widest text-[#7cf5f8] font-bold">El Espíritu de La Cotorra</span>
+<h3 className="font-display-xl text-headline-md sm:text-headline-lg font-bold tracking-tight" style={{'color': '#F5EBE1'}}>
           “Nos vemos en la barra”
         </h3>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-lg">

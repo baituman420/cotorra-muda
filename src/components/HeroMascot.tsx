@@ -68,6 +68,7 @@ export const HeroMascot: React.FC<HeroMascotProps> = ({ className = '' }) => {
               width: '100%',
               height: '100%',
               display: 'block',
+              mixBlendMode: 'multiply',
             }}
           />
         </div>

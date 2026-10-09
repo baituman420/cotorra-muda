@@ -34,8 +34,8 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
-      style={{ borderBottom: '2px solid rgba(44, 38, 35, 0.12)' }}
+      className="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+      style={{ borderBottom: '1px solid rgba(245, 235, 225, 0.15)' }}
     >
       <div className="h-20 max-w-7xl mx-auto px-6 lg:px-margin-lg flex items-center justify-between gap-gutter">
         {/* Logo and Brand */}
@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
             }}
             className="flex items-center gap-3 group py-1"
           >
-            <div className="h-14 w-14 rounded-2xl overflow-hidden shadow-md border-2 border-[#3A302A]/40 bg-[#2C2623] flex-shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center ring-2 ring-[#dded3a]/30">
+            <div className="h-14 w-14 rounded-2xl overflow-hidden shadow-md border-2 border-[#504138] bg-[#2C2623] flex-shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center ring-2 ring-[#dded3a]/40">
               <img
                 src={`${import.meta.env.BASE_URL}images/branding/logo.jpg`}
                 alt="La Cotorra Muda Gastrobar"
@@ -56,10 +56,10 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-[19px] font-bold tracking-tight text-[#2D231E] leading-none">
+              <span className="font-headline-sm text-[19px] font-bold tracking-tight text-on-surface leading-none">
                 La Cotorra Muda
               </span>
-              <span className="font-label-sm text-[11px] uppercase tracking-widest text-secondary font-semibold mt-1">
+              <span className="font-label-sm text-[11px] uppercase tracking-widest text-[#7cf5f8] font-semibold mt-1">
                 Gastrobar · Bilbao
               </span>
             </div>

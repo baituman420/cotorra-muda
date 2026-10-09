@@ -20,7 +20,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
 <span className="font-label-sm text-label-sm uppercase tracking-widest font-bold">Cocina de Mercado &amp; Taberna Vasca</span>
 </div>
-<h1 className="font-display-xl text-display-xl-mobile lg:text-display-xl text-primary tracking-tight" style={{'color': 'rgb(45, 35, 30)'}}>
+<h1 className="font-display-xl text-display-xl-mobile lg:text-display-xl text-primary tracking-tight" style={{'color': '#F5EBE1'}}>
             La Carta de La Cotorra.
           </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -212,7 +212,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">El Alma de Bilbao</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>Barra de Pintxos Diaria</h2>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>Barra de Pintxos Diaria</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
           Barras repletas de color, bandejas que salen humeantes y el ritual vasco de charlar de pie con un buen bocado.
@@ -282,7 +282,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Mañanas con Ritmo</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>Desayunos &amp; Brunch</h2>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>Desayunos &amp; Brunch</h2>
 </div>
 <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest shadow-sm font-label-md text-label-md text-on-surface">
 <span className="material-symbols-outlined text-[16px] text-secondary">wb_sunny</span>
@@ -347,7 +347,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">100% Natural &amp; Energético</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>Smoothies &amp; Zumos Vivos</h2>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>Smoothies &amp; Zumos Vivos</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
           Fruta entera triturada al instante. Sin azúcares añadidos ni concentrados industriales. Pura vitalidad.
@@ -428,7 +428,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Cuchara &amp; Placer Compartido</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>Raciones, Cazuelas &amp; Tablas</h2>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>Raciones, Cazuelas &amp; Tablas</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
           Recetas cocinadas a fuego lento, salsas untuosas de toda la vida y quesos seleccionados de pastores del País Vasco.
@@ -525,7 +525,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <div className="lg:col-span-7 space-y-space-md">
 <div>
 <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Tragos con Identidad</span>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>Vinos, Txakolis &amp; Vermuts</h2>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>Vinos, Txakolis &amp; Vermuts</h2>
 <p className="font-body-md text-body-md text-on-surface-variant mt-2">
               Una bodega viva con especial cariño por los productores de la comarca, vinos de Rioja Alavesa de pequeños viticultores y vermuts preparados al estilo del Botxo.
             </p>
@@ -584,7 +584,7 @@ export const Carta: React.FC<CartaProps> = ({ onNavigate }) => {
 <span className="material-symbols-outlined text-[16px]">takeout_dining</span>
 <span className="">Servicio Take Away</span>
 </div>
-<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': 'rgb(45, 35, 30)'}}>
+<h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary" style={{'color': '#F5EBE1'}}>
             ¿Comes en casa o en la oficina?
           </h2>
 <p className="font-body-md text-body-md text-on-surface-variant">
