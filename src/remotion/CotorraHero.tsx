@@ -27,10 +27,10 @@ export const CotorraHero: React.FC<CotorraHeroProps> = ({ videoSrc }) => {
           height: '100%',
           objectFit: 'contain',
           objectPosition: 'center',
-          transform: 'translateY(16px) scale(0.92)',
+          transform: 'translateY(10px) scale(0.97)',
           mixBlendMode: 'multiply',
-          WebkitMaskImage: 'linear-gradient(to bottom, black 82%, transparent 98%)',
-          maskImage: 'linear-gradient(to bottom, black 82%, transparent 98%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 95%)',
+          maskImage: 'linear-gradient(to bottom, black 65%, transparent 95%)',
           display: 'block',
         }}
         muted

@@ -17,7 +17,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 <div className="max-w-7xl mx-auto px-6 lg:px-margin-lg pt-space-lg">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
 {/*  Left Column: Typography & CTAs  */}
-<div className="lg:col-span-7 flex flex-col space-y-space-md z-10">
+<div className="lg:col-span-6 xl:col-span-6 flex flex-col space-y-space-md z-10">
 <div className="inline-flex items-center gap-space-xs w-fit bg-[#2D231E] text-surface-bright px-space-md py-space-xs rounded-full shadow-sm border border-[#3E3028]"><span className="w-2.5 h-2.5 rounded-full bg-[#dded3a] animate-ping"></span><span className="font-label-sm text-label-sm uppercase tracking-widest font-bold text-[#dded3a]">Barra Viva · Bilbao Indautxu</span></div>
 <h1 className="font-display-xl text-display-xl-mobile lg:text-display-xl font-extrabold uppercase tracking-tight text-[#2D231E] leading-none">
             Aquí la cotorra es muda. <br />
@@ -47,7 +47,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 </div>
 </div>
 {/*  Right Column: Visual Composition with Mascot & Real Photos  */}
-<div className="lg:col-span-5 relative mt-space-md lg:mt-0 flex flex-col items-center">
+<div className="lg:col-span-6 xl:col-span-6 relative mt-space-md lg:mt-0 flex flex-col items-center justify-start overflow-visible">
             <HeroMascot />
           </div>
         </div>
