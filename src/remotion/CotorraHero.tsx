@@ -17,7 +17,7 @@ export const CotorraHero: React.FC<CotorraHeroProps> = ({ videoSrc }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#00656c',
+        backgroundColor: 'transparent',
         overflow: 'hidden',
       }}
     >
@@ -26,7 +26,7 @@ export const CotorraHero: React.FC<CotorraHeroProps> = ({ videoSrc }) => {
         style={{
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
+          objectFit: 'contain',
           display: 'block',
         }}
         muted
