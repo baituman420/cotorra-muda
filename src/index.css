@@ -83,11 +83,11 @@
 
 @media (min-width: 1024px) {
   .cotorra-video-element {
-    object-fit: contain !important;
-    object-position: center !important;
-    transform: translateY(10px) scale(0.97) !important;
-    mask-image: linear-gradient(to bottom, black 65%, transparent 95%);
-    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 95%);
+    object-fit: cover !important;
+    object-position: 80% center !important;
+    transform: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
   }
 }
 

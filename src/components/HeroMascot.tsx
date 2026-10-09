@@ -9,8 +9,8 @@ interface HeroMascotProps {
 export const HeroMascot: React.FC<HeroMascotProps> = ({ className = '' }) => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [dimensions, setDimensions] = useState(() => ({
-    width: typeof window !== 'undefined' ? (window.innerWidth < 1024 ? window.innerWidth : 1280) : 1280,
-    height: typeof window !== 'undefined' ? (window.innerWidth < 1024 ? window.innerHeight : 720) : 720,
+    width: typeof window !== 'undefined' ? window.innerWidth : 1280,
+    height: typeof window !== 'undefined' ? window.innerHeight : 720,
   }));
 
   useEffect(() => {
@@ -18,14 +18,10 @@ export const HeroMascot: React.FC<HeroMascotProps> = ({ className = '' }) => {
     setPrefersReducedMotion(motionQuery.matches);
 
     const updateDimensions = () => {
-      if (window.innerWidth < 1024) {
-        setDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      } else {
-        setDimensions({ width: 1280, height: 720 });
-      }
+      setDimensions({
+        width: typeof window !== 'undefined' ? window.innerWidth : 1280,
+        height: typeof window !== 'undefined' ? window.innerHeight : 720,
+      });
     };
 
     updateDimensions();
